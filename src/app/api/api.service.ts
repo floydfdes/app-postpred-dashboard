@@ -6,8 +6,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ApiService {
   constructor(private http: HttpClient) {}
-  //private apiUrl = 'https://postpred.herokuapp.com';
-  private apiUrl = 'http://localhost:5000/';
+  private apiUrl = 'https://postpred.herokuapp.com';
+  //private apiUrl = 'http://localhost:5000/';
   getAllUsers() {
     return this.http.get(this.apiUrl + 'auth/getAllUsers');
   }
