@@ -1,1 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: RobotoMedium;
+  src: url("../src/assets/fonts/Poppins-Thin.ttf");
+}
+@font-face {
+  font-family: RobotoBold;
+  src: url("../src/assets/fonts/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: RobotoRegular;
+  src: url("../src/assets/fonts/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: RobotoSemiBold;
+  src: url("../src/assets/fonts/Poppins-SemiBold.ttf");
+}
+:root {
+  --primary-color: #008a8b;
+  --secondary-color: #dff8fe;
+  --third-color: #003458;
+  --fourth-color: #82cde5;
+  --primary-color: #efedd8;
+  --secondary-color: #529b38;
+  --third-color: #cfd427;
+  --fourth-color: #15440f;
+  --fifth-color: #fbf4e4;
+}
+body,
+html {
+  font-family: RobotoRegular !important;
+  scroll-behavior: smooth;
+  background-color: var(--primary-color);
+}
+
+.p-menubar-start {
+  display: flex;
+  align-items: center;
+  font-family: RobotoRegular !important;
+
+  div {
+    font-family: RobotoBold;
+    margin: 0px 5px;
+    font-size: 1.5rem;
+    color: var(--third-color);
+  }
+}
+p-menubar {
+  .p-menuitem-text,
+  .p-menuitem-icon {
+    color: var(--fourth-color) !important;
+  }
+}
