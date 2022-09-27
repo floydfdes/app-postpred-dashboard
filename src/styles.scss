@@ -32,7 +32,11 @@ html {
   scroll-behavior: smooth;
   background-color: var(--primary-color);
 }
-
+@media screen and (max-width: 764px) {
+  .p-menubar-start {
+    width: 100%;
+  }
+}
 .p-menubar-start {
   display: flex;
   align-items: center;
@@ -49,5 +53,8 @@ p-menubar {
   .p-menuitem-text,
   .p-menuitem-icon {
     color: var(--fourth-color) !important;
+  }
+  .pi-bars {
+    color: var(--fourth-color);
   }
 }
