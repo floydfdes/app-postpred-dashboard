@@ -1,1 +1,48 @@
-<p>post-list works!</p>
+<p-table [value]="posts" responsiveLayout="stack">
+  <ng-template pTemplate="caption"> List of posts </ng-template>
+  <ng-template pTemplate="header" let-columns>
+    <tr>
+      <th>Id</th>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Creator</th>
+      <th>Description</th>
+      <th>Likes</th>
+      <th>Tags</th>
+      <th>Actions</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-post let-columns="columns">
+    <tr>
+      <td><span class="p-column-title">Id</span>{{ post._id }}</td>
+      <td><span class="p-column-title">Title</span>{{ post.title }}</td>
+      <td>
+        <span class="p-column-title">Date</span
+        >{{ post.date | date: "MMM d, y" }}
+      </td>
+      <td><span class="p-column-title">Creator</span>{{ post.creatorName }}</td>
+      <td>
+        <span class="p-column-title">Description</span>{{ post.description }}
+      </td>
+      <td><span class="p-column-title">Likes</span>{{ post.likes.length }}</td>
+      <td><span class="p-column-title">Tags</span>{{ post.tags }}</td>
+      <td>
+        <span class="p-column-title">Actions</span>
+        <button
+          pButton
+          pRipple
+          icon="pi pi-pencil"
+          class="p-button-rounded p-button-success mr-2"
+          (click)="editPost(post)"
+        ></button>
+        <button
+          pButton
+          pRipple
+          icon="pi pi-trash"
+          class="p-button-rounded p-button-warning"
+          (click)="deletePost(post)"
+        ></button>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>

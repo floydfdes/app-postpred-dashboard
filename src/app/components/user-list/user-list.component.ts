@@ -15,4 +15,10 @@ export class UserListComponent implements OnInit {
       this.users = res;
     });
   }
+  editUser(user: Users) {
+    console.log(user);
+  }
+  deleteUser(user: Users) {
+    console.log(user);
+  }
 }

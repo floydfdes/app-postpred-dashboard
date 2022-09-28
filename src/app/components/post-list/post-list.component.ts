@@ -15,4 +15,10 @@ export class PostListComponent implements OnInit {
       this.posts = res;
     });
   }
+  editPost(posts: Posts) {
+    console.log(posts);
+  }
+  deletePost(posts: Posts) {
+    console.log(posts);
+  }
 }

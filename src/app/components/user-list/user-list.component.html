@@ -8,6 +8,7 @@
       <th>Last Name</th>
       <th>Age</th>
       <th>Gender</th>
+      <th>Actions</th>
     </tr>
   </ng-template>
   <ng-template pTemplate="body" let-user let-columns="columns">
@@ -20,6 +21,23 @@
       <td><span class="p-column-title">Last Name</span>{{ user.lastName }}</td>
       <td><span class="p-column-title">Age</span>{{ user.age }}</td>
       <td><span class="p-column-title">Gender</span>{{ user.gender }}</td>
+      <td>
+        <span class="p-column-title">Actions</span>
+        <button
+          pButton
+          pRipple
+          icon="pi pi-pencil"
+          class="p-button-rounded p-button-success mr-2"
+          (click)="editUser(user)"
+        ></button>
+        <button
+          pButton
+          pRipple
+          icon="pi pi-trash"
+          class="p-button-rounded p-button-warning"
+          (click)="deleteUser(user)"
+        ></button>
+      </td>
     </tr>
   </ng-template>
 </p-table>

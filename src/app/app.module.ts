@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 
 import { MenubarModule } from 'primeng/menubar';
 import { TableModule } from 'primeng/table';
+import { ButtonModule } from 'primeng/button';
 
 import { HeaderComponent } from './components/layout/header/header.component';
 import { UserListComponent } from './components/user-list/user-list.component';
@@ -29,6 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     MenubarModule,
     TableModule,
+    ButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
